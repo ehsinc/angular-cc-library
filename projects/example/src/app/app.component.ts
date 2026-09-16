@@ -1,5 +1,5 @@
 import { AsyncPipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { Validators, FormGroup, FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreditCardValidators, CreditCard, CreditCardDirectivesModule } from 'angular-cc-library';
 import { defer } from 'rxjs';
@@ -8,6 +8,7 @@ import { map } from 'rxjs/operators';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [FormsModule, ReactiveFormsModule, AsyncPipe, CreditCardDirectivesModule]
 })
 export class AppComponent {

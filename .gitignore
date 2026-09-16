@@ -11,6 +11,7 @@ compiled/
 *.js
 *.js.map
 !/index.js
+!/eslint.config.js
 src/**/*.js
 src/**/*.map
 src/**/*.json
